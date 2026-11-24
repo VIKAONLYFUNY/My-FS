@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой первый сайт</title>
+
+    <style>
+        body {
+            background-color: lightcyan;
+            color: teal;
+            transition: 0.5s;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: teal;
+        }
+
+        button {
+            background-color: teal;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .pink {
+            background-color: #ffe4ec;
+            color: #d63384;
+        }
+
+        .pink h1 {
+            color: #d63384;
+        }
+
+        .pink button {
+            background-color: #d63384;
+        }
+
+        .purple {
+            background-color: #eee5ff;
+            color: #7541b8;
+        }
+
+        .purple h1 {
+            color: #7541b8;
+        }
+
+        .purple button {
+            background-color: #7541b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Это мой сайт!</h1>
+
+    <p>Привет, это мой первый сайт!</p>
+
+    <p>Меня зовут Вика хихи.</p>
+
+    <button onclick="changeColor()">
+        Поменять цвет!
+    </button>
+
+    <script>
+        let colorNumber = 0;
+
+        function changeColor() {
+            colorNumber++;
+
+            if (colorNumber === 1) {
+                document.body.className = "pink";
+            } 
+            else if (colorNumber === 2) {
+                document.body.className = "purple";
+            } 
+            else {
+                document.body.className = "";
+                colorNumber = 0;
+            }
+        }
+    </script>
+
+</body>
+</html>
